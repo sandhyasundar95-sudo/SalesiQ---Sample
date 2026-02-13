@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Website with Buttons</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        header {
+            background: #2196F3;
+            color: white;
+            padding: 25px;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn1 {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn1:hover {
+            background: #45a049;
+        }
+
+        .btn2 {
+            background: #ff9800;
+            color: white;
+        }
+
+        .btn2:hover {
+            background: #e68900;
+        }
+
+        .btn3 {
+            background: #f44336;
+            color: white;
+        }
+
+        .btn3:hover {
+            background: #d32f2f;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #2196F3;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>My Sample Website</h1>
+    <p>Website with Interactive Buttons</p>
+</header>
+
+<section>
+    <h2>Click the Buttons Below 👇</h2>
+
+    <button class="btn1" onclick="showMessage('Hello! Welcome to my website 😊')">
+        Say Hello
+    </button>
+
+    <button class="btn2" onclick="changeBackground()">
+        Change Background
+    </button>
+
+    <button class="btn3" onclick="clearMessage()">
+        Clear Message
+    </button>
+
+    <div id="message"></div>
+</section>
+
+<footer>
+    © 2026 Sample Website
+</footer>
+
+<script>
+    function showMessage(text) {
+        document.getElementById("message").innerHTML = text;
+    }
+
+    function changeBackground() {
+        const colors = ["#f2f2f2", "#ffe0e0", "#e0f7fa", "#fff9c4"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        document.body.style.background = randomColor;
+    }
+
+    function clearMessage() {
+        document.getElementById("message").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>
+
